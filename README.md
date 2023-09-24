@@ -16,7 +16,7 @@ Ao baixar o templates todas as configurações de estrutura estarão prontas:
 
 ## Instalação
 
-1. Clone este repositório: `git clone https://github.com/org-logshare/boilerprate-nestjs-docker-clean-arch.git`
+1. Clone este repositório: `git clone https://github.com/devmaykinho/boilerprate-nestjs-docker-clean-arch.git`
 2. Entre no diretório do projeto: `cd boilerprate-nestjs-docker-clean-arch`
 3. Instale as dependências: `yarn install`
 
