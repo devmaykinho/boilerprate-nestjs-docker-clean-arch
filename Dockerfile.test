@@ -1,0 +1,8 @@
+FROM node:18.17.1-slim AS base-image
+WORKDIR /app
+COPY package*.json ./
+RUN yarn install --quiet
+COPY . .
+EXPOSE 8080
+FROM base-image AS api-image
+CMD ["yarn", "run", "start:dev" ]

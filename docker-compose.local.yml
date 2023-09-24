@@ -1,0 +1,25 @@
+version: '3'
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.local
+    environment:
+      - ENVIRONMENT=local
+    ports:
+      - '8080:8080'
+    command: yarn run start:dev  
+    working_dir: /app
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    depends_on:
+      - mongo  
+
+  mongo:
+    image: mongo:6
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: test
+    ports:
+      - '27017:27017'      
